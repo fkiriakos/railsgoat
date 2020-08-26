@@ -1,0 +1,69 @@
+---
+version: "2"
+checks:
+  file-lines:
+    enabled: false
+  similar-code:
+    enabled: true
+    config:
+      threshold: 3
+  identical-code:
+    enabled: true
+    config:
+      threshold: 3
+engines:
+  brakeman:
+    enabled: true
+  bundler-audit:
+    enabled: true
+  csslint:
+    enabled: true
+  duplication:
+    enabled: false
+  eslint:
+    enabled: true
+    exclude_patterns:
+      - app/assets/javascript/vendor/
+  rubocop:
+    enabled: true
+    channel: rubocop-0-81
+    checks:
+      Rubocop/Lint/AmbiguousBlockAssociation:
+        enabled: false
+      Rubocop/Metrics/AbcSize:
+        enabled: false
+      Rubocop/Metrics/BlockLength:
+        enabled: false
+      Rubocop/Metrics/BlockNesting:
+        enabled: false
+      Rubocop/Metrics/ClassLength:
+        enabled: false
+      Rubocop/Metrics/CognitiveComplexity:
+        enabled: false
+      Rubocop/Metrics/CyclomaticComplexity:
+        enabled: false
+      Rubocop/Metrics/MethodLength:
+        enabled: false
+      Rubocop/Metrics/ModuleLength:
+        enabled: false
+      Rubocop/Metrics/ParameterLists:
+        enabled: false
+      Rubocop/Metrics/PerceivedComplexity:
+        enabled: false
+      RSpec/ExampleLength:
+        enabled: false
+      RSpec/NestedGroups:
+        enabled: false
+      RSpec/ContextWording:
+        enabled: false
+exclude_patterns:
+  - bin/
+  - db/
+  - deploy/
+  - doc/
+  - experiments/
+  - log/
+  - public/
+  - tmp/
+  - tools/
+  - "**/vendor/"
