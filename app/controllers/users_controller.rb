@@ -51,7 +51,7 @@ class UsersController < ApplicationController
   end
 
   # unpermitted attributes are ignored in production
-  # def user_params_without_password
-  #   params.require(:user).permit(:email, :admin, :first_name, :last_name)
-  # end
+  def user_params_without_password
+    params.require(:user).permit(:email, :admin, :first_name, :last_name)
+  end
 end
