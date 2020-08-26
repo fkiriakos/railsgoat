@@ -22,40 +22,6 @@ engines:
     enabled: false
   eslint:
     enabled: true
-    exclude_patterns:
-      - app/assets/javascript/vendor/
-  rubocop:
-    enabled: true
-    channel: rubocop-0-81
-    checks:
-      Rubocop/Lint/AmbiguousBlockAssociation:
-        enabled: false
-      Rubocop/Metrics/AbcSize:
-        enabled: false
-      Rubocop/Metrics/BlockLength:
-        enabled: false
-      Rubocop/Metrics/BlockNesting:
-        enabled: false
-      Rubocop/Metrics/ClassLength:
-        enabled: false
-      Rubocop/Metrics/CognitiveComplexity:
-        enabled: false
-      Rubocop/Metrics/CyclomaticComplexity:
-        enabled: false
-      Rubocop/Metrics/MethodLength:
-        enabled: false
-      Rubocop/Metrics/ModuleLength:
-        enabled: false
-      Rubocop/Metrics/ParameterLists:
-        enabled: false
-      Rubocop/Metrics/PerceivedComplexity:
-        enabled: false
-      RSpec/ExampleLength:
-        enabled: false
-      RSpec/NestedGroups:
-        enabled: false
-      RSpec/ContextWording:
-        enabled: false
 exclude_patterns:
   - bin/
   - db/
